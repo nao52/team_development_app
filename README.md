@@ -1,24 +1,50 @@
-# README
+# Ruby on Railsを用いたチーム開発を行います！
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+これは、学習のためRuby on Railsを用いてチーム開発を行うためのアプリケーションです。
+アプリケーションの内容は未定です。
 
-Things you may want to cover:
+# 使用技術
 
-* Ruby version
+### バックエンド
+* Ruby 3.1.4
+* Rails 7.0.8
 
-* System dependencies
+### テスト
+* Rspec
 
-* Configuration
+# セットアップ
 
-* Database creation
+このアプリケーションを動かす場合は、まずはリポジトリを手元にクローンしてください。
+その後、Dockerを使った環境構築を行います。
 
-* Database initialization
+Dockerを使った環境準備(イメージのビルド)
+```
+$ docker compose build
+```
 
-* How to run the test suite
+railsサーバーの起動(バックグラウンドでのコンテナの立ち上げとrailsサーバーの起動)
+```
+docker compose up -d
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+コンテナ内に入る(rails・bundlerのコマンドはコンテナ内で実行します)
+```
+docker compose exec web bash
+```
 
-* Deployment instructions
+### 以下はコンテナ内で実行する
 
-* ...
+データベースの作成(コンテナ内で実行してください)
+```
+rails db:create
+```
+
+テーブルの作成
+```
+$ rails db:migrate
+```
+
+テストデータの作成
+```
+$ rails db:seed
+```

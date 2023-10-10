@@ -1,15 +1,3 @@
 <h1>記事の新規投稿</h1>
 
-<%= form_with(model: @article) do |f| %>
-  <div>
-    <%= f.label :title, "タイトル" %> <br>
-    <%= f.text_field :title %>
-  </div>
-
-  <div>
-    <%= f.label :body, "内容" %> <br>
-    <%= f.text_area :body, cols: 50, rows: 5 %>
-  </div>
-
-  <%= f.submit "記事を作成する" %>
-<% end %>
+<%= render 'form', button_message: "記事を作成する" %>

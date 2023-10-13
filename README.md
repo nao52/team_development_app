@@ -48,3 +48,8 @@ $ rails db:migrate
 ```
 $ rails db:seed
 ```
+
+リモートリポジトリをプルした後、dockerが起動しない場合は、下記のコマンドを試してみてください
+```
+$ docker compose run web bundle install
+```

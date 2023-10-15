@@ -1,7 +1,9 @@
 user = User.create(
-  last_name: "ナゲ",
+  last_name: "テスト",
   first_name: "太郎",
-  email:  "example@test.com"
+  email:  "example@test.com",
+  password: "password",
+  password_confirmation: "password"
 )
 
 # テスト用の記事を30個作成する

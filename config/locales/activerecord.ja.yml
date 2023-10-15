@@ -2,6 +2,7 @@ ja:
   activerecord:
     models:
       user: ユーザー
+      article: 記事
     attributes:
       user:
         email: メールアドレス
@@ -9,3 +10,6 @@ ja:
         first_name: 名
         password: パスワード
         password_confirmation: パスワード確認
+      article:
+        title: タイトル
+        body: 内容

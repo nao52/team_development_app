@@ -1,4 +1,6 @@
 class UserSessionsController < ApplicationController
+  skip_before_action :require_login, only: %i[new create]
+
   def new; end
 
   def create
@@ -7,7 +9,7 @@ class UserSessionsController < ApplicationController
      if @user
        redirect_to root_path
      else
-       render :new
+       render :new, status: :unprocessable_entity
      end
   end
   

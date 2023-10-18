@@ -2,16 +2,20 @@
   <div class="row">
     <div class=" col-md-10 col-lg-8 mx-auto">
       <h1>ログイン</h1>
-      <%= form_with url: login_path do |f| %>
+      <%= form_with url: login_path, local: true do |f| %>
         <div class="mb-3">
           <%= f.label :email %>
-          <%= f.email_field :email, class: "form-control" %>
+          <%= f.text_field :email, class: 'form-control' %>
         </div>
+
         <div class="mb-3">
-          <%= f.label :password %>
-          <%= f.password_field :password, class: "form-control" %>
+        <%= f.label :password %>
+        <%= f.password_field :password, class: 'form-control' %>
         </div>
-        <%= f.submit "ログイン", class: "btn btn-primary" %>
+        
+        <div class="commit">
+          <%= f.submit (t '.login'), class: 'btn btn-primary', data: { disable_with: (t '.login') } %>
+        </div>
       <% end %>
       <div class='text-center'>
         <%= link_to '登録ページへ', new_user_path %>

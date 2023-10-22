@@ -24,3 +24,11 @@ ja:
     login: ログイン
     logout: ログアウト
     profile: プロフィール
+  comments:
+    create:
+      success: コメントを作成しました
+      danger: コメントを作成できませんでした
+  articles:
+    show:
+      edit: 編集
+      delete: 削除

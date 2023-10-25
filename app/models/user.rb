@@ -7,6 +7,10 @@ class User < ApplicationRecord
   validates :first_name, presence: true, length: { maximum: 200 }
   validates :last_name, presence: true, length: { maximum: 200 }
   validates :email, presence: true, length: { maximum: 200 }, uniqueness: true
-  
+
   has_many :articles, dependent: :destroy
+
+  def name
+    "#{first_name} #{last_name}"
+  end
 end

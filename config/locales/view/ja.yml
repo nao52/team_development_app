@@ -27,8 +27,10 @@ ja:
       failure: ユーザー登録に失敗しました
     edit:
       success: ユーザー情報を編集しました
+      failure: 他のユーザーは編集できません
     destroy:
       success: ユーザー情報を削除しました
+      failure: 他のユーザーの情報は削除できません
   header:
     login: ログイン
     logout: ログアウト

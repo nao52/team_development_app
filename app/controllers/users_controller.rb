@@ -8,7 +8,7 @@ class UsersController < ApplicationController
   def edit
     @user = User.find(params[:id])
     unless @user == current_user
-      redirect_to users_path, danger: '他のユーザーは編集できません。'
+      redirect_to users_path, danger: t('users.edit.failure')
     end
   end
 
@@ -22,8 +22,13 @@ class UsersController < ApplicationController
   end
 
   def destroy
-    User.find(params[:id]).destroy
-    redirect_to users_url, status: :see_other, danger: t('users.destroy.success')
+    @user = User.find(params[:id])
+    if @user == current_user
+      @user.destroy
+      redirect_to users_url, status: :see_other, success: t('users.destroy.success')
+    else
+      redirect_to users_url, status: :see_other, danger: t('users.destroy.failure')
+    end
   end
 
   def new

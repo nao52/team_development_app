@@ -12,7 +12,7 @@ class UsersController < ApplicationController
   def update
     @user = User.find(params[:id])
     if @user.update(user_params)
-      redirect_to users_url
+      redirect_to users_url, success: t('users.edit.success')
     else
       render :edit, status: :unprocessable_entity
     end
@@ -20,7 +20,7 @@ class UsersController < ApplicationController
 
   def destroy
     User.find(params[:id]).destroy
-    redirect_to users_url, status: :see_other
+    redirect_to users_url, status: :see_other, danger: t('users.destroy.success')
   end
 
   def new

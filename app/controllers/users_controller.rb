@@ -10,16 +10,17 @@ class UsersController < ApplicationController
   end
 
   def update
-    if @user && @user.update(user_params)
-      redirect_to @user, notice: 'ユーザー情報を更新しました'
+    @user = User.find(params[:id])
+    if @user.update(user_params)
+      redirect_to users_url
     else
-      render 'edit'
+      render :edit, status: :unprocessable_entity
     end
   end
 
   def destroy
-    @user.destroy
-    redirect_to root_path, notice: 'ユーザーが削除されました'
+    User.find(params[:id]).destroy
+    redirect_to users_url, status: :see_other
   end
 
   def new

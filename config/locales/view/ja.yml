@@ -27,7 +27,12 @@ ja:
   comments:
     create:
       success: コメントを作成しました
-      danger: コメントを作成できませんでした
+      danger: コメントを作成出来ませんでした
+    update:
+      success: コメントを更新しました
+      failure: コメントを更新出来ませんでした
+    destroy:
+      success: コメントを削除しました
     comment:
       edit: 編集
       delete: 削除

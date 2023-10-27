@@ -1,0 +1,7 @@
+<h5><%= user.first_name %> <%= user.last_name  %></h5>
+
+<p>
+  <%= link_to "ユーザーの編集", edit_user_path(user) %> |
+  <%= link_to "ユーザーの削除", user, data: { "turbo-method": :delete, turbo_confirm: "#{user}を削除しますか？" } %>
+</p>
+<hr>

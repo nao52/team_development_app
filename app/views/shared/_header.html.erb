@@ -22,6 +22,10 @@
           <%= link_to 'ブックマーク一覧', '#', class: 'nav-link' %>
         </li>
 
+        <li class='nav-item'>
+          <%= link_to 'ユーザー一覧', users_path, class: 'nav-link' %>
+        </li>
+
         <li class='nav-item dropdown dropdown-slide'>
           <%= link_to '#', class: 'nav-link', data: { bs_toggle: 'dropdown' }, aria: { haspopup: 'true', expanded: 'false' }, id: 'header-profile' do %>
             <%= image_tag 'sample (1).jpg', class: 'rounded-circle mr15', width: '40', height: '40' %>

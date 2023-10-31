@@ -13,11 +13,6 @@ ja:
       login: ログイン
       to_register_page: 登録ページへ
       password_forget: パスワードをお忘れの方はこちら
-    create:
-      success: ログインしました
-      failure: ログインに失敗しました
-    destroy:
-      success: ログアウトしました
   users:
     new:
       title: ユーザー登録
@@ -29,3 +24,19 @@ ja:
     login: ログイン
     logout: ログアウト
     profile: プロフィール
+  comments:
+    create:
+      success: コメントを作成しました
+      danger: コメントを作成出来ませんでした
+    update:
+      success: コメントを更新しました
+      failure: コメントを更新出来ませんでした
+    destroy:
+      success: コメントを削除しました
+    comment:
+      edit: 編集
+      delete: 削除
+  articles:
+    show:
+      edit: 編集
+      delete: 削除

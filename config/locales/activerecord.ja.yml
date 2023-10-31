@@ -3,6 +3,7 @@ ja:
     models:
       user: ユーザー
       comment: コメント
+      article: 記事
     attributes:
       user:
         email: メールアドレス
@@ -12,3 +13,6 @@ ja:
         password_confirmation: パスワード確認
       comment:
         body: コメント
+      article:
+        title: タイトル
+        body: 内容
